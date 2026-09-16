@@ -6,7 +6,7 @@
  */
 
 import { juegos } from "../data/juegos";
-import { ActualizacionJuego, Genero, Juego, NuevoJuego } from "../tipos/juego";
+import { ActualizacionJuego, Genero, Juego, NuevoJuego } from "../tipos";
 import { ApiError } from "../apiError";
 
 // Simula un autoincremento de id, como haría una base de datos real.

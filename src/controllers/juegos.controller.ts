@@ -9,7 +9,7 @@
 
 import { Request, Response, NextFunction } from "express";
 import * as juegosService from "../services/juegos.service";
-import { Genero } from "../tipos/juego";
+import { Genero } from "../tipos";
 import { ApiError } from "../apiError";
 
 export function listar(req: Request, res: Response, next: NextFunction): void {
