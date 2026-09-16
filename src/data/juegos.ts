@@ -1,6 +1,6 @@
 import { Juego } from "../tipos";
 
-export const catalogoJuegos: Juego[] = [
+export const juegos: Juego[] = [
     { id: 1, nombre: "Marvel's Spider-Man", genero: "Accion", plataforma: "PlayStation", fechaLanzamiento: new Date("2018-09-07"), puntaje: 87 },
     { id: 2, nombre: "The Legend of Zelda: Breath of the Wild", genero: "Aventura", plataforma: "Nintendo Switch", fechaLanzamiento: new Date("2017-03-03"), puntaje: 97 },
     { id: 3, nombre: "FIFA 21", genero: "Deportes", plataforma: "PC", fechaLanzamiento: new Date("2020-10-09"), puntaje: 85 },
