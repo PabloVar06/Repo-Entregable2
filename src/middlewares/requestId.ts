@@ -23,5 +23,5 @@ declare global {
 export function requestId(req: Request, res: Response, next: NextFunction): void {
   req.id = crypto.randomUUID();
   res.setHeader("X-Request-Id", req.id);
-  next(); // Sin este `next()`, la petición nunca llegaría a los demás middlewares.
+  next(); 
 }

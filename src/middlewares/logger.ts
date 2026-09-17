@@ -11,8 +11,6 @@ import { Request, Response, NextFunction } from "express";
 export function logger(req: Request, res: Response, next: NextFunction): void {
   const inicio = Date.now();
 
-  // El evento "finish" ocurre cuando la respuesta terminó de enviarse.
-  // No bloqueamos nada esperando: solo nos suscribimos al evento.
   res.on("finish", () => {
     const duracionMs = Date.now() - inicio;
     console.log(

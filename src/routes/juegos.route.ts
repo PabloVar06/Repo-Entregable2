@@ -11,8 +11,8 @@ import * as juegosController from "../controllers/juegos.controller";
 
 export const juegosRouter = Router();
 
-juegosRouter.get("/", juegosController.listar);           // GET    /juegos            -> listar (con ?genero= opcional)
-juegosRouter.get("/:id", juegosController.obtenerPorId);  // GET    /juegos/:id         -> obtener uno
-juegosRouter.post("/", juegosController.crear);           // POST   /juegos            -> crear
-juegosRouter.put("/:id", juegosController.actualizar);    // PUT    /juegos/:id         -> actualizar
-juegosRouter.delete("/:id", juegosController.eliminar);   // DELETE /juegos/:id         -> eliminar
+juegosRouter.get("/", juegosController.listar);           
+juegosRouter.get("/:id", juegosController.obtenerPorId);  
+juegosRouter.post("/", juegosController.crear);           
+juegosRouter.put("/:id", juegosController.actualizar);    
+juegosRouter.delete("/:id", juegosController.eliminar);   

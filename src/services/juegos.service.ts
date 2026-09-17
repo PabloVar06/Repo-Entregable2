@@ -9,7 +9,6 @@ import { juegos } from "../data/juegos";
 import { ActualizacionJuego, Genero, Juego, NuevoJuego } from "../tipos";
 import { ApiError } from "../apiError";
 
-// Simula un autoincremento de id, como haría una base de datos real.
 let siguienteId = juegos.length + 1;
 
 export function listarJuegos(genero?: Genero): Juego[] {
@@ -26,7 +25,6 @@ export function buscarJuegoPorId(id: number): Juego {
 }
 
 export function crearJuego(datos: NuevoJuego): Juego {
-  // Validación básica de negocio antes de crear.
   if (!datos.nombre || !datos.genero || !datos.plataforma) {
     throw new ApiError(400, "nombre, genero y plataforma son obligatorios");
   }
@@ -45,7 +43,7 @@ export function crearJuego(datos: NuevoJuego): Juego {
 }
 
 export function actualizarJuego(id: number, cambios: ActualizacionJuego): Juego {
-  const juego = buscarJuegoPorId(id); // reutiliza la validación de existencia
+  const juego = buscarJuegoPorId(id); 
 
   if (
     cambios.puntaje !== undefined &&
