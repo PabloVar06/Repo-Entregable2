@@ -31,7 +31,7 @@ export function obtenerPorId(req: Request, res: Response, next: NextFunction): v
     const juego = juegosService.buscarJuegoPorId(id);
     res.json({ juego, requestId: req.id });
   } catch (error) {
-    next(error); // El middleware de errores decide status y formato de la respuesta.
+    next(error); 
   }
 }
 
@@ -58,7 +58,7 @@ export function eliminar(req: Request, res: Response, next: NextFunction): void 
   try {
     const id = Number(req.params.id);
     juegosService.eliminarJuego(id);
-    res.status(204).send(); // 204 No Content: eliminado, sin cuerpo de respuesta.
+    res.status(204).send(); 
   } catch (error) {
     next(error);
   }
